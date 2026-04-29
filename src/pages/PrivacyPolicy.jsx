@@ -67,15 +67,16 @@ const sections = [
   {
     icon: Shield,
     id: 'third-party',
-    title: '3. Third-Party AI Providers',
+    title: '3. Third-Party AI Provider — Groq, Inc.',
     content: [
-      { type: 'p', text: 'To power our AI analysis capabilities, Ram Vector may use secure, enterprise-grade third-party AI API providers. These providers:' },
+      { type: 'p', text: 'Ram Vector uses Groq, Inc. (groq.com) as its third-party AI service provider to analyse uploaded PDF documents. When you upload a PDF, the extracted text content is transmitted to Groq\'s servers to generate summaries, action points, and workflow diagrams.' },
       { type: 'ul', items: [
-        { text: 'Process document content solely for the purpose of generating AI summaries and analysis.' },
-        { text: 'Are bound by strict data processing agreements and do not retain submitted content beyond the processing window.' },
-        { text: 'Operate under industry-standard security frameworks.' },
+        { strong: 'What is sent to Groq:', text: ' the text content extracted from your PDF document and document metadata (filename, file size).' },
+        { strong: 'Who receives it:', text: ' Groq, Inc., headquartered in the United States.' },
+        { strong: 'Purpose:', text: ' AI-powered document analysis only. Groq does not use your data for advertising or profiling.' },
+        { strong: 'Groq\'s data practices:', text: ' governed by Groq\'s Privacy Policy at https://groq.com/privacy-policy/' },
       ]},
-      { type: 'p', text: 'We carefully evaluate all third-party services for compliance with applicable privacy standards before integration.' },
+      { type: 'p', text: 'By using Ram Vector and accepting the in-app privacy consent, you explicitly consent to your document text being sent to Groq, Inc. for processing. We do not share your data with any other third parties.' },
     ],
   },
   {
