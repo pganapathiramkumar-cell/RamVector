@@ -111,7 +111,7 @@ const whyPoints = [
   { icon: Clock, text: 'Save hours of reading with AI-generated summaries in under 30 seconds.' },
   { icon: Users, text: 'Designed for students, researchers, lawyers, business analysts, and executives.' },
   { icon: Lock, text: 'Privacy-first architecture. Documents are processed transiently, never stored permanently.' },
-  { icon: Globe, text: 'Works on iPhone and iPad. Native app available on the Apple App Store.' },
+  { icon: Globe, text: 'Available on iOS and Android. Download from the App Store or Google Play.' },
   { icon: Sparkles, text: 'Powered by modern AI language models for accurate, context-aware analysis.' },
   { icon: Zap, text: 'Lightning-fast analysis. Most documents processed in under 30 seconds.' },
 ];
@@ -181,7 +181,7 @@ export default function Home() {
       <section className={styles.trustBar} aria-label="Trust signals">
         <div className="container">
           <div className={styles.trustInner}>
-            {['Built for iOS', 'Privacy First', 'AI Powered', 'Instant Results', 'Secure Upload'].map(t => (
+            {['iOS & Android', 'Privacy First', 'AI Powered', 'Instant Results', 'Secure Upload'].map(t => (
               <div key={t} className={styles.trustItem}>
                 <ShieldCheck size={14} />
                 <span>{t}</span>
@@ -327,7 +327,7 @@ export default function Home() {
             </h2>
             <p className={styles.ctaSub}>
               Built with privacy, speed, and modern AI intelligence.
-              Download Ram Vector on the App Store.
+              Available on iOS and Android.
             </p>
             <div className={styles.ctaBtns}>
               <Link

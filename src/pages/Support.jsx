@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   Mail, Clock, ChevronDown, ChevronUp,
-  Upload, Cpu, Shield, Bug, Settings, MessageCircle,
+  Upload, Cpu, Shield, Bug, Settings, MessageCircle, Phone,
 } from 'lucide-react';
 import styles from '../styles/Support.module.css';
 
@@ -35,12 +35,12 @@ const faqs = [
 
 /* ── Topic cards ────────────────────────────────────────── */
 const topics = [
-  { icon: Upload, label: 'Upload Issues',         color: '#7c3aed', bg: '#f5f3ff' },
-  { icon: Cpu,    label: 'AI Summary Questions',  color: '#4f46e5', bg: '#eef2ff' },
-  { icon: Settings,label:'Feature Requests',      color: '#0d9488', bg: '#f0fdfa' },
-  { icon: Bug,    label: 'Bug Reports',           color: '#dc2626', bg: '#fef2f2' },
-  { icon: Shield, label: 'Privacy Questions',     color: '#0284c7', bg: '#f0f9ff' },
-  { icon: MessageCircle, label: 'General Help',   color: '#7c3aed', bg: '#f5f3ff' },
+  { icon: Upload,        label: 'Upload Issues',        color: '#7c3aed', bg: '#f5f3ff', subject: 'Upload Issue - Ram Vector' },
+  { icon: Cpu,           label: 'AI Summary Questions', color: '#4f46e5', bg: '#eef2ff', subject: 'AI Summary Question - Ram Vector' },
+  { icon: Settings,      label: 'Feature Requests',     color: '#0d9488', bg: '#f0fdfa', subject: 'Feature Request - Ram Vector' },
+  { icon: Bug,           label: 'Bug Reports',          color: '#dc2626', bg: '#fef2f2', subject: 'Bug Report - Ram Vector' },
+  { icon: Shield,        label: 'Privacy Questions',    color: '#0284c7', bg: '#f0f9ff', subject: 'Privacy Question - Ram Vector' },
+  { icon: MessageCircle, label: 'General Help',         color: '#7c3aed', bg: '#f5f3ff', subject: 'General Help - Ram Vector' },
 ];
 
 /* ── FAQ item ───────────────────────────────────────────── */
@@ -116,6 +116,19 @@ export default function Support() {
 
             <div className={styles.contactCard}>
               <div className={styles.contactCardIcon} style={{ background: '#f0fdfa', color: '#0d9488' }}>
+                <Phone size={22} />
+              </div>
+              <h3 className={styles.contactCardTitle}>Phone Support</h3>
+              <p className={styles.contactCardDesc}>
+                Call us directly for urgent support queries during business hours.
+              </p>
+              <a href="tel:+917996656111" className={styles.contactCardLink}>
+                +91 7996656111
+              </a>
+            </div>
+
+            <div className={styles.contactCard}>
+              <div className={styles.contactCardIcon} style={{ background: '#fffbeb', color: '#d97706' }}>
                 <Clock size={22} />
               </div>
               <h3 className={styles.contactCardTitle}>Response Time</h3>
@@ -135,13 +148,17 @@ export default function Support() {
           <h2 id="topics-heading" className={styles.sectionTitle}>Support Topics</h2>
           <p className={styles.sectionSub}>We can help you with any of the following areas:</p>
           <div className={styles.topicsGrid}>
-            {topics.map(({ icon: Icon, label, color, bg }) => (
-              <div key={label} className={styles.topicCard}>
+            {topics.map(({ icon: Icon, label, color, bg, subject }) => (
+              <a
+                key={label}
+                href={`mailto:ramgigatech@gmail.com?subject=${encodeURIComponent(subject)}`}
+                className={styles.topicCard}
+              >
                 <div className={styles.topicIcon} style={{ background: bg, color }}>
                   <Icon size={20} />
                 </div>
                 <span className={styles.topicLabel}>{label}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>

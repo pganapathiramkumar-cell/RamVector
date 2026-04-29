@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Shield, LifeBuoy, ExternalLink } from 'lucide-react';
+import { Mail, Phone, Shield, LifeBuoy } from 'lucide-react';
 import styles from '../styles/Footer.module.css';
 
 const Logo = () => (
@@ -24,18 +24,24 @@ export default function Footer() {
           <p className={styles.tagline}>
             AI-powered document intelligence for students, professionals, and researchers.
           </p>
-          <a href="mailto:ramgigatech@gmail.com" className={styles.email}>
-            <Mail size={14} />
-            ramgigatech@gmail.com
-          </a>
+          <div className={styles.contactLinks}>
+            <a href="mailto:ramgigatech@gmail.com" className={styles.contactLink}>
+              <Mail size={13} />
+              ramgigatech@gmail.com
+            </a>
+            <a href="tel:+917996656111" className={styles.contactLink}>
+              <Phone size={13} />
+              +91 7996656111
+            </a>
+          </div>
         </div>
 
         <div className={styles.col}>
           <h3 className={styles.colTitle}>Product</h3>
           <ul className={styles.colLinks}>
             <li><Link to="/">Home</Link></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#why">Why Ram Vector</a></li>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#why">Why Ram Vector</a></li>
           </ul>
         </div>
 
@@ -67,14 +73,18 @@ export default function Footer() {
           <h3 className={styles.colTitle}>Download</h3>
           <ul className={styles.colLinks}>
             <li>
-              <a href="#" aria-label="Download on App Store">
-                <ExternalLink size={13} />
-                App Store
-              </a>
+              <Link to="/support">
+                App Store (iOS)
+              </Link>
+            </li>
+            <li>
+              <Link to="/support">
+                Google Play (Android)
+              </Link>
             </li>
           </ul>
           <div className={styles.appBadge}>
-            <span>Available on iOS</span>
+            <span>iOS &amp; Android</span>
           </div>
         </div>
 
