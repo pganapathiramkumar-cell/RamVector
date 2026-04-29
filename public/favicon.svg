@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#7c3aed"/>
+  <rect x="14" y="14" width="36" height="36" rx="8" fill="#5b21b6" transform="rotate(45 32 32)"/>
+  <rect x="20" y="20" width="24" height="24" rx="5" fill="#7c3aed" opacity="0.5" transform="rotate(45 32 32)"/>
+  <text x="32" y="38" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" fill="white" letter-spacing="-0.5">RV</text>
+</svg>
